@@ -18,13 +18,13 @@ publishDate: 2017-01-01
 publication_types: ["2"]
 
 # Publication name and optional abbreviated publication name.
-publication: ""
+publication: "*NeuroImage*"
 publication_short: ""
 
 abstract: "Permutation testing is a non-parametric method for obtaining the max null distribution used to compute corrected p-values that provide strong control of false positives. In neuroimaging, however, the computational burden of running such an algorithm can be significant. We find that by viewing the permutation testing procedure as the construction of a very large permutation testing matrix, , one can exploit structural properties derived from the data and the test statistics to reduce the runtime under certain conditions. In particular, we see that  is low-rank plus a low-variance residual. This makes  a good candidate for low-rank matrix completion, where only a very small number of entries of  ( of all entries in our experiments) have to be computed to obtain a good estimate. Based on this observation, we present RapidPT, an algorithm that efficiently recovers the max null distribution commonly obtained through regular permutation testing in voxel-wise analysis. We present an extensive validation on a synthetic dataset and four varying sized datasets against two baselines: Statistical NonParametric Mapping (SnPM13) and a standard permutation testing implementation (referred as NaivePT). We find that RapidPT achieves its best runtime performance on medium sized datasets (), with speedups of 1.5× - 38× (vs. SnPM13) and 20x-1000× (vs. NaivePT). For larger datasets () RapidPT outperforms NaivePT (6× - 200×) on all datasets, and provides large speedups over SnPM13 when more than 10000 permutations (2× - 15×) are needed. The implementation is a standalone toolbox and also integrated within SnPM13, able to leverage multi-core architectures when available."
 
 # Summary. An optional shortened abstract.
-summary: ""
+summary: "Proposed an algorithm that speeds up permutation testing in neuroimaging data by exploting structural properties of the test statistics derived from the data. The implementation is available in a [development version](https://github.com/felipegb94/SnPM-devel) of the widely used neuroimaging toolbox, SnPM."
 
 tags: []
 categories: []

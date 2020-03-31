@@ -25,13 +25,12 @@ publishDate: 2019-01-01
 publication_types: ["9"]
 
 # Publication name and optional abbreviated publication name.
-publication: ""
-publication_short: ""
+publication: "US Patent App. 15/699,623"
 
 abstract: "In accordance with some embodiments, systems, methods and media for encoding and decoding signals used in time-of-flight imaging are provided. In some embodiments, a method for estimating the depth of a scene is provided, comprising: causing a light source to emit modulated light toward the scene based on a modulation function; causing the image sensor to generate a first value based on the modulated light and a first demodulation function of K modulation functions; causing the image sensor to generate a second value; causing the image sensor to generate a third value; and determining a depth estimate for the portion of the scene based on the first value, the second value, the third value, and three correlation functions each including at least one half of a trapezoid wave."
 
 # Summary. An optional shortened abstract.
-summary: ""
+summary: "Patent for the coding schemes proposed in our 2019 CVPR paper: *Practical Coding Function Design for Time-of-Flight Imaging*."
 
 tags: []
 categories: []
@@ -49,7 +48,7 @@ url_pdf:
 url_code:
 url_dataset:
 url_poster:
-url_project:
+url_project: "http://wisionlab.cs.wisc.edu/project/tofcoding/"
 url_slides:
 url_source: https://patents.google.com/patent/US20190146073A1/en
 url_video:

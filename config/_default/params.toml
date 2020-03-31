@@ -12,7 +12,8 @@
 theme = "badger_red_minimal"
 
 # Enable users to switch between day and night mode?
-day_night = true
+# Enable users to switch between light and dark theme mode?
+day_night = false
 
 # Override the theme's font set (optional).
 #   Latest font sets (may require updating): https://sourcethemes.com/academic/themes/
@@ -259,7 +260,7 @@ plugins_js  = []
   #   1: Google Maps
   #   2: OpenStreetMap (Mapnik)
   #   3: OpenStreetMap (Mapbox)
-  engine = 2
+  engine = 0
   api_key = ""
   zoom = 15
 
