@@ -11,7 +11,7 @@
 # }
 
 title: "Systems, methods and, media for encoding and decoding signals used in time of flight imaging"
-authors: [Felipe Gutierrez, Mohit Gupta,Andreas Velten,Eric Breitbach,Shree K. Nayar]
+authors: [Felipe Gutierrez-Barragan, Mohit Gupta,Andreas Velten,Eric Breitbach,Shree K. Nayar]
 date: 2019-01-01
 doi: ""
 
