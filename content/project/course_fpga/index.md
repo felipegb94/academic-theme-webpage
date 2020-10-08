@@ -1,9 +1,9 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Learning ToF Depth Estimation"
-abstract: "For the Deep Neural Networks course, my teammates explored to the idea of training a neural network to learn to predict depth from continuous-wave time-of-flight (ToF) data. Depth inference from ToF measurements can be done with an analytical formula. This formula, however, makes some simplifying assumptions on the data and does not use the fact that neighbor pixels should have similar depth. We developed a training dataset of simulated ToF data for various shapes and trained a fully convolutional network to perform depth inference."
-summary: "Depth Inference from ToF data with Neural Networks"
+title: "FPGA Programming"
+summary: "FPGA control of Quadcopter motors"
+abstract: "Throughout the Digital System Design and Synthesis course (ECE551) we developed all the building blocks to control the motors on a quadcopter. We developed modules and testbenches for Serial Peripheral Interface (SPI), Universal Async Receiver Transmitted (UART), Electronic Speed Control (ESC), Analog to Digital Conversion, inertial sensor interfaces, etc.  The final project involved putting everything together and testing it our code thoroughly. Finally, once we were sure everything was working we were able to test it and control an actual Quadcopter. The modules and testbenches were all coded in Verilog."
 authors: []
 tags: ["course"]
 categories: []
@@ -28,8 +28,8 @@ image:
 #   icon_pack: fab
 #   icon: twitter
 
-url_code: "https://github.com/felipegb94/NeuralWaveToF"
-url_pdf: "/files/report-2017-neuralwavetof.pdf"
+url_code: ""
+url_pdf: ""
 url_slides: ""
 url_video: ""
 
