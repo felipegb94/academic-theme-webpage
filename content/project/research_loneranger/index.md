@@ -43,3 +43,7 @@ url_project: "http://wisionlab.cs.wisc.edu/project/tofcoding/"
 #   Otherwise, set `slides = ""`.
 slides: ""
 ---
+
+The Lone Ranger is a modular continuous-wave time-of-flight camera for 3D sensing built from off the shelf parts. The main components are an arbitrary function generator, RF modulated laser, beam splitter, galvo mirrors, focusing lens, an APD, a frequency mixer, RF amplifiers, a low pass filter, and a data acquisition card. The triggers, controls, and data acquisition are fully automated with LabVIEW.
+
+Additional description of the system is in section 8 of the supplement of the pdf.

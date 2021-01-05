@@ -40,3 +40,5 @@ url_video: ""
 #   Otherwise, set `slides = ""`.
 slides: ""
 ---
+
+We evaluated three different approaches to generate a dense point cloud from a 3D mesh. In particle-based fluid-solid interaction simulations it is desirable to have a dense point cloud representation of a 3D mesh. We find that a ray-crossing approach to detect if a particle is inside the mesh or not is a simple and effective way to generate the point clouds.

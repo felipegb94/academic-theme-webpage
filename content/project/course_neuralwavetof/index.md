@@ -2,7 +2,7 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Learning ToF Depth Estimation"
-abstract: "For the Deep Neural Networks course, my teammates explored to the idea of training a neural network to learn to predict depth from continuous-wave time-of-flight (ToF) data. Depth inference from ToF measurements can be done with an analytical formula. This formula, however, makes some simplifying assumptions on the data and does not use the fact that neighbor pixels should have similar depth. We developed a training dataset of simulated ToF data for various shapes and trained a fully convolutional network to perform depth inference."
+abstract: "For the Deep Neural Networks course, my teammates and I explored to the idea of training a neural network to learn to predict depth from continuous-wave time-of-flight (ToF) data. Depth inference from ToF measurements can be done with an analytical formula. This formula, however, makes some simplifying assumptions on the data and does not use the fact that neighbor pixels should have similar depth. We developed a training dataset of simulated ToF data for various shapes and trained a fully convolutional network to perform depth inference."
 summary: "Depth Inference from ToF data with Neural Networks"
 authors: []
 tags: ["course"]
@@ -40,3 +40,5 @@ url_video: ""
 #   Otherwise, set `slides = ""`.
 slides: ""
 ---
+
+For the Deep Neural Networks course, my teammates and I explored to the idea of training a neural network to learn to predict depth from continuous-wave time-of-flight (ToF) data. Depth inference from ToF measurements can be done with an analytical formula. This formula, however, makes some simplifying assumptions on the data and does not use the fact that neighbor pixels should have similar depth. We developed a training dataset of simulated ToF data for various shapes and trained a fully convolutional network to perform depth inference.

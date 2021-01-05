@@ -40,3 +40,5 @@ url_video: ""
 #   Otherwise, set `slides = ""`.
 slides: ""
 ---
+
+CPU and GPU implementations of Permutation Testing using the Armadillo and Arrayfire libraries

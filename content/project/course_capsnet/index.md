@@ -40,3 +40,6 @@ url_video: ""
 #   Otherwise, set `slides = ""`.
 slides: ""
 ---
+
+
+For the Machine Learning (CS760) course my teammates and I studied Capsule Networks and evaluated their performance in the content-based image retrieval task. We modified two different Capsule Net impementations in Tensorflow and applied them to the image retrieval task on the Google Landmark dataset.

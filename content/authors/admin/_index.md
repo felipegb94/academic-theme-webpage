@@ -1,10 +1,6 @@
 ---
 # Display name
-name: Felipe Gutierrez Barragan
-
-# Username (this should match the folder name)
-authors:
-- admin
+title: Felipe Gutierrez Barragan
 
 # Is this the primary user of the site?
 superuser: true
@@ -12,7 +8,7 @@ superuser: true
 # Role/position
 role: Ph.D. Candidate
 
-# Organizations/Affiliations
+# Organizations/Affiliations to show in About widget
 organizations:
 - name: University of Wisconsin-Madison
   url: "https://www.cs.wisc.edu/"
@@ -20,10 +16,12 @@ organizations:
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include computational imaging, computer vision, medical imaging, and physics-based modeling and simulation.
 
+# Interests to show in About widget
 interests:
 - Computational Imaging
 - Time-of-Flight and LIDAR Imaging
 
+# Education to show in About widget
 education:
   courses:
   - course: Ph.D. in Computer Science
@@ -32,14 +30,14 @@ education:
   - course: M.S. in Computer Science
     institution: University of Wisconsin-Madison
     year: 2018
-  - course: B.S in Applied Math, Engineering, and Physics (AMEP)
+  - course: B.S. in Applied Math, Engineering, and Physics (AMEP)
     institution: University of Wisconsin-Madison
     year: 2016
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
-#   form "mailto:your-email@example.com" or "#contact" for contact widget.
+#   form "mailto:your-email@example.com" or "/#contact" for contact widget.
 social:
 - icon: envelope
   icon_pack: fas
@@ -65,12 +63,8 @@ social:
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""
 
-# Organizational groups that you belong to (for People widget)
-#   Set this to `[]` or comment out if you are not using People widget.
-# user_groups:
-# - Researchers
-# - Visitors
-
+# Highlight the author in author lists? (true/false)
+highlight_name: false
 ---
 
 I am a 4th year Ph.D. student at UW-Madison advised by [Prof. Andreas Velten](https://biostat.wisc.edu/~compoptics/) and [Prof. Mohit Gupta](http://wisionlab.cs.wisc.edu/). My work is at the intersection of computer vision, signal processing, optics, and machine learning. My recent work has focused on practical modifications to time-of-flight imaging systems that allow them to operate robustly in everyday and adverse conditions. In general, I am interested in the theory, design, and applications of imaging systems. 

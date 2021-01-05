@@ -40,3 +40,5 @@ url_video: ""
 #   Otherwise, set `slides = ""`.
 slides: ""
 ---
+
+For my final project for the Computational Imaging course (ECE901) I evaluated the performance of different continuous-wave time-of-flight coding functions under the presence of global illumination (direct + multi-bounce illumination). I compare the performance of the coding functions proposed [here](http://wisionlab.cs.wisc.edu/project/tofcoding/) with regular sinusoid coding. They are evaluated on a complex scene with a strong global illumination component. To obtain ToF brightness measurements, I obtain the impulse response for each scene pixel using a [transient rendering code](http://giga.cps.unizar.es/~ajarabo/pubs/transientSIGA14/), then convolve the response with the coding function, and then integrate.

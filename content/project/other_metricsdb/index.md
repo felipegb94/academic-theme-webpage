@@ -43,3 +43,5 @@ url_project: http://projectchrono.org/status/
 #   Otherwise, set `slides = ""`.
 slides: ""
 ---
+
+In this project we developed the full-stack of a web application that keeps track of the testing and performance metrics of Project Chrono. Every time a commit is made to the Chrono repository a set of unit tests and performance tests are ran on different machines. We extract metrics from these tests and save them in a database. The Project Chrono webpage can query the database through a RESTful API. You can see the [metrics history here](http://projectchrono.org/status/).

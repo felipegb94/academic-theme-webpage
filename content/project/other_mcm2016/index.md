@@ -40,3 +40,5 @@ url_video: ""
 #   Otherwise, set `slides = ""`.
 slides: ""
 ---
+
+My teammates and I performed a data-driven analysis of different space debris reduction approaches. We modeled the debris in LEO, spacecraft launches, and the interactions as reaction networks based on Continuous Time Markov Chains. The arrival of spacecraft, the generation of new debris via collisions and routine missions, and debris removal, are modeled as stochastic point processes with rates and effects characterized by data. This project was awarded Meritorious Winner (top 8%) at [COMAP's 2016 Math Contest in Modeling] (http://www.comap.com/undergraduate/contests/).
