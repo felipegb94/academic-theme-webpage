@@ -39,3 +39,5 @@ url_video: ""
 #   Otherwise, set `slides = ""`.
 slides: ""
 ---
+
+Course project for the Big Data Systems course at UW-Madison. "Geo-distributed Machine Learning with the Parameter Server"
