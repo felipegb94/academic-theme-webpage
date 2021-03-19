@@ -21,8 +21,9 @@ of iToF2dToF over previous methods in real depth sensing scenarios."
 featured: true
 # publication: "*Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition*"
 # url_code: "https://github.com/felipegb94/ToFSim"
-url_pdf: "http://pages.cs.wisc.edu/~felipe/files/preprint-2021-itof2dtof-v1.pdf"
-# url_video: "https://www.youtube.com/watch?v=tzs2WuwZ4ag"
+url_pdf: "https://arxiv.org/abs/2103.07087"
+url_arxiv: "https://arxiv.org/abs/2103.07087"
+url_video: "https://youtu.be/tEMinzXNTv8"
 # url_project: "http://wisionlab.cs.wisc.edu/project/tofcoding/"
 summary: "Proposed to train data-driven ToF models to estimate an intermediate representation that encodes depths, instead of depthmaps."
 
