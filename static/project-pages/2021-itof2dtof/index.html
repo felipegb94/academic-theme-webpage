@@ -1,0 +1,281 @@
+<html><head lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>iToF2dToF</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="icon" type="image/png" href="./assets/icon.png">
+    <link rel="stylesheet" href="../index_files/bootstrap.min.css">
+    <link rel="stylesheet" href="../index_files/font-awesome.min.css">
+    <link rel="stylesheet" href="../index_files/codemirror.min.css">
+    <link rel="stylesheet" href="../index_files/app.css">
+    <link rel="stylesheet" href="../index_files/bootstrap.min(1).css">
+    
+    <link rel="stylesheet" href="./custom.css">
+
+    <script type="text/javascript" async="" src="../index_files/analytics.js"></script>
+    <script type="text/javascript" async="" src="../index_files/analytics(1).js"></script>
+    <script async="" src="../index_files/js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-110862391-3');
+    </script>
+
+    <script src="../index_files/jquery.min.js"></script>
+    <script src="../index_files/bootstrap.min.js"></script>
+    <script src="../index_files/codemirror.min.js"></script>
+    <script src="../index_files/clipboard.min.js"></script>
+
+    <script src="../index_files/app.js"></script>
+</head>
+
+<body data-gr-c-s-loaded="true">
+    <div class="container" id="main">
+        <div class="row">
+            <h1 class="col-md-12 text-center">
+                iToF2dToF: A Robust and Flexible Representation <br>for Data-driven Time-of-Flight Imaging
+            <br /><br />
+            <small>
+                IEEE Transactions on Computational Imaging (<i>To appear</i>)
+            </small>
+            <br /><br />
+            </h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="http://pages.cs.wisc.edu/~felipe/" target="_blank">
+                          Felipe Gutierrez-Barragan
+                        </a><sup>2*</sup>
+                    </li>
+                    <li>
+                        <a href="https://scholar.google.com/citations?user=6E9elWUAAAAJ&hl=en" target="_blank">
+                            Huaijin (George) Chen
+                        </a>
+                        <sup>1</sup>
+                    </li>
+                    <li>
+                        <a href="https://wisionlab.cs.wisc.edu/people/mohit-gupta/" target="_blank">
+                          Mohit Gupta
+                        </a><sup>2</sup>
+                    </li>
+                    <li>
+                        <a href="https://biostat.wisc.edu/~velten/" target="_blank">
+                            Andreas Velten
+                        </a>
+                        <sup>2</sup>
+                    </li>
+                    <li>
+                        <a href="https://www.gujinwei.org/" target="_blank">
+                            Jinwei Gu
+                        </a>
+                        <sup>1</sup>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <sup>1</sup>
+                        <a href="https://www.sensebrain.ai/" target="_blank">
+                            SenseBrain Technology
+                        </a>
+                    </li>
+                    <li>
+                        <sup>2</sup>University of Wisconsin-Madison
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <sup>*</sup>Work completed during internship at SenseBrain
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="https://arxiv.org/abs/2103.07087" target="_blank">
+                            <img src="./assets/paper.png" height="120px"><br>
+                                <h4><strong>Arxiv (Preprint)</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://youtu.be/tEMinzXNTv8" target="_blank">
+                            <img src="./assets/youtube_icon_dark.png" height="120px"><br>
+                                <h4><strong>Technical Video</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                            <img src="./assets/github_pad.png" height="120px"><br>
+                                <h4><strong>Code (TBD)</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#iToF2dToFDataset">
+                            <img src="./assets/dataNew.png" height="120px"><br>
+                                <h4><strong>Dataset</strong></h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
+<!-- 
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    &nbsp&nbsp&nbsp
+                </h3>
+                <video id="v0" width="100%" autoplay="" loop="" muted="" controls="">
+                  <source src="http://cseweb.ucsd.edu/~viscomp/projects/CVPR21OpenRooms/example.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div> -->
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Overview
+                </h3>
+                <img src="./assets/coverimg_specular_mpi_and_itof2dtof_overview_v3.png" class="img-responsive" alt="overview"><br>
+                <p class="text-justify">
+                    Indirect Time-of-Flight (iToF) cameras are a promising depth sensing technology.
+                    However, they are prone to errors caused by multi-path interference (MPI) and low signal-to-noise ratio (SNR).
+                    Traditional methods, after denoising, mitigate MPI by estimating a transient image that encodes depths. 
+                    Recently, data-driven methods that jointly denoise and mitigate MPI have become state-of-the-art without using the intermediate transient representation.  
+                    In this paper, we propose to revisit the transient representation. 
+                    Using data-driven priors, we interpolate/extrapolate iToF frequencies and use them to estimate the transient image.
+                    Given direct ToF (dToF) sensors capture transient images, we name our method iToF2dToF.
+                    The transient representation is flexible.
+                    It can be integrated with different rule-based depth sensing algorithms that are robust to low SNR and can deal with ambiguous scenarios that arise in practice (e.g., specular MPI, optical cross-talk).
+                    We demonstrate the benefits of iToF2dToF over previous methods in real depth sensing scenarios.
+                </p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Highlights
+                </h3>
+                <p class="text-justify">
+                    <ul>
+                        <li>
+                            A robust and flexible representation for data-driven iToF that improves depth sensing in different scenarios.                         </li>
+                        <li>
+                            An extensive validation of our data-driven models on real-world data with ground truth.                        </li>
+                        <li>
+                            A synthetic iToF dataset with realistic geometry, textures, and noise.                        </li>
+                        </li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Technical Video
+                </h3>
+                <div class="text-center">
+                    <!-- <video id="v0" width="100%" autoplay="" loop="" muted="" controls="">
+                        <source src="http://cseweb.ucsd.edu/~viscomp/projects/CVPR21OpenRooms/video.mp4" type="video/mp4">
+                    </video> -->
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/tEMinzXNTv8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    ICCP 2021 Poster Presentation
+                </h3>
+                <div class="text-center">
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/otMm0RtggNo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            
+                </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <a id="iToF2dToFDataset"> </a>
+                <h3>
+                    Dataset
+                </h3>
+                <p class='text-justify'>To download the dataset, please send your request to Felipe Gutierrez-Barragan. 
+                </p>
+
+                <p class='text-justify'>The dataset contains 5,000 sets of synthetic images rendered from 200 views of 25 scenes. A single set of images includes:
+                    <ul>
+                        <li>
+                            RGB image
+                        </li>
+                        <li>
+                            Ground truth depth image                        
+                        </li>
+                        <li>
+                            iToF frequency images at 31 frequencies (0-600MHz in steps of 20MHz). Each frequency image is composed of an amplitude and a phase component. The iToF frequency images are obtained from the transient images of the same scene which were simulated using <a href="https://github.com/cmu-ci-lab/MitsubaToFRenderer" target="_blank">MitsubaToF</a>.                 
+                        </li>
+                        <li>
+                            4x4 camera view matrix
+                        </li>
+                    </ul> 
+                </p>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Bibtex Citation
+                </h3>
+                <div class="bibtexsection">
+    @article{gutierrez2021itof2dtof,
+        title={iToF2dToF: A Robust and Flexible Representation 
+            for Data-Driven Time-of-Flight Imaging},
+        author={Gutierrez-Barragan, Felipe 
+            and Chen, Huaijin 
+            and Gupta, Mohit 
+            and Velten, Andreas 
+            and Gu, Jinwei},
+        journal={arXiv preprint arXiv:2103.07087},
+        year={2021}
+      }
+                </div>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Acknowledgments
+                </h3>
+                <p>
+                    * Work done during internship at SenseBrain Technology
+                </p>
+                The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a>.
+            </div>
+        </div>
+    
+    </div>
+
+
+</body></html>

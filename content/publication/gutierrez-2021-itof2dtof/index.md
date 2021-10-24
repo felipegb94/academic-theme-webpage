@@ -1,5 +1,5 @@
 ---
-title: "iToF2dToF: A Robust and Flexible Representation for Data-driven Time-of-Flight Imaging (Preprint)"
+title: "iToF2dToF: A Robust and Flexible Representation for Data-driven Time-of-Flight Imaging"
 date: 2021-01-01
 publishDate: 2021-01-01
 authors: ["Felipe Gutierrez-Barragan", "Huaijin Chen", "Mohit Gupta", "Andreas Velten", "Jinwei Gu"]
@@ -24,7 +24,7 @@ featured: true
 url_pdf: "https://arxiv.org/abs/2103.07087"
 url_arxiv: "https://arxiv.org/abs/2103.07087"
 url_video: "https://youtu.be/tEMinzXNTv8"
-# url_project: "http://wisionlab.cs.wisc.edu/project/tofcoding/"
+url_project: "/~felipe/project-pages/2021-itof2dtof/"
 summary: "Proposed to train data-driven ToF models to estimate an intermediate representation that encodes depths, instead of depthmaps."
 
 ---

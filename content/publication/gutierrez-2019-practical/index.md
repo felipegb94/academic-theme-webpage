@@ -10,9 +10,8 @@ publication: "*Proceedings of the IEEE Conference on Computer Vision and Pattern
 url_code: "https://github.com/felipegb94/ToFSim"
 url_pdf: "http://openaccess.thecvf.com/content_CVPR_2019/html/Gutierrez-Barragan_Practical_Coding_Function_Design_for_Time-Of-Flight_Imaging_CVPR_2019_paper.html"
 url_video: "https://www.youtube.com/watch?v=tzs2WuwZ4ag"
-url_project: "http://wisionlab.cs.wisc.edu/project/tofcoding/"
+url_project: "/~felipe/project-pages/2019CVPRPracticalToFCodes/"
+# url: "customHTML/2019CVPRPracticalToFCodes/"
 summary: "Proposed a new set of ToF coding schemes that achieve higher depth precision than traditional codes while adhering to practical hardware constraints."
-
-
 ---
 

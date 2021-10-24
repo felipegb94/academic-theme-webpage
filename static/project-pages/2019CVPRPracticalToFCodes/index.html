@@ -1,0 +1,240 @@
+<html><head lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Practical ToF Codes</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="icon" type="image/png" href="./assets/icon.png">
+    <link rel="stylesheet" href="../index_files/bootstrap.min.css">
+    <link rel="stylesheet" href="../index_files/font-awesome.min.css">
+    <link rel="stylesheet" href="../index_files/codemirror.min.css">
+    <link rel="stylesheet" href="../index_files/app.css">
+    <link rel="stylesheet" href="../index_files/bootstrap.min(1).css">
+    
+    <link rel="stylesheet" href="./custom.css">
+
+    <script type="text/javascript" async="" src="../index_files/analytics.js"></script>
+    <script type="text/javascript" async="" src="../index_files/analytics(1).js"></script>
+    <script async="" src="../index_files/js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-110862391-3');
+    </script>
+
+    <script src="../index_files/jquery.min.js"></script>
+    <script src="../index_files/bootstrap.min.js"></script>
+    <script src="../index_files/codemirror.min.js"></script>
+    <script src="../index_files/clipboard.min.js"></script>
+
+    <script src="../index_files/app.js"></script>
+</head>
+
+<body data-gr-c-s-loaded="true">
+    <div class="container" id="main">
+        <div class="row">
+            <h1 class="col-md-12 text-center">
+                Practical Coding Function Design <br>for Time-of-Flight Imaging
+            <br /><br />
+            <small>
+                IEEE CVPR 2019
+            </small>
+            <br /><br />
+            </h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="http://pages.cs.wisc.edu/~felipe/" target="_blank">
+                          Felipe Gutierrez-Barragan
+                        </a><sup>1</sup>
+                    </li>
+                    <li>
+                        <a href="https://scholar.google.com/citations?user=9Rli3Y8AAAAJ&hl=en" target="_blank">
+                            Syed Azer Reza
+                        </a>
+                        <sup>1</sup>
+                    </li>
+                    <li>
+                        <a href="https://biostat.wisc.edu/~velten/" target="_blank">
+                            Andreas Velten
+                        </a>
+                        <sup>1</sup>
+                    </li>
+                    <li>
+                        <a href="https://wisionlab.cs.wisc.edu/people/mohit-gupta/" target="_blank">
+                          Mohit Gupta
+                        </a><sup>1</sup>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <sup>1</sup>University of Wisconsin-Madison
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+
+
+        <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="https://openaccess.thecvf.com/content_CVPR_2019/html/Gutierrez-Barragan_Practical_Coding_Function_Design_for_Time-Of-Flight_Imaging_CVPR_2019_paper.html" target="_blank">
+                            <img src="./assets/paper.png" height="120px"><br>
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://youtu.be/tzs2WuwZ4ag" target="_blank">
+                            <img src="./assets/youtube_icon_dark.png" height="120px"><br>
+                                <h4><strong>CVPR 2019 Video</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://youtu.be/SSdYyNFoUFI" target="_blank">
+                            <img src="./assets/youtube_icon_dark.png" height="120px"><br>
+                                <h4><strong>ICCP 2021 Demo</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/felipegb94/ToFSim" target="_blank">
+                            <img src="./assets/github_pad.png" height="120px"><br>
+                                <h4><strong>Code</strong></h4>
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a href="#iToF2dToFDataset">
+                            <img src="./assets/dataNew.png" height="120px"><br>
+                                <h4><strong>Dataset</strong></h4>
+                            </a>
+                        </li> -->
+                    </ul>
+                </div>
+        </div>
+
+<!-- 
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    &nbsp&nbsp&nbsp
+                </h3>
+                <video id="v0" width="100%" autoplay="" loop="" muted="" controls="">
+                  <source src="http://cseweb.ucsd.edu/~viscomp/projects/CVPR21OpenRooms/example.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div> -->
+
+        <hr>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Overview
+                </h3>
+                <img src="./assets/CodeDesignGoal.png" class="img-responsive" alt="overview"><br>
+                <p class="text-justify">
+                    The depth resolution of a continuous-wave time-of-flight
+                    (CW-ToF) imaging system is determined by its coding functions. Recently, there has been growing interest in the design of new high-performance CW-ToF coding functions.
+                    However, these functions are typically designed in a hardware agnostic manner, i.e., without considering the practical device limitations, such as bandwidth, source power,
+                    digital (binary) function generation. Therefore, despite theoretical improvements, practical implementation of these
+                    functions remains a challenge. We present a constrained
+                    optimization approach for designing practical coding functions that adhere to hardware constraints. The optimization problem is non-convex with a large search space and
+                    no known globally optimal solutions. To make the problem
+                    tractable, we design an iterative, alternating least-squares
+                    algorithm, along with convex relaxation of the constraints.
+                    Using this approach, we design high-performance coding
+                    functions that can be implemented on existing hardware
+                    with minimal modifications. We demonstrate the performance benefits of the resulting functions via extensive simulations and a hardware prototype
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    A Coding Theory of Time-of-Flight Imaging (ICCP 2020)
+                </h3>
+                <p class="text-justify">
+                    Poster presentation at ICCP 2020 of our coding function design work. 
+                    Additional information on the different related publications can be found <a href="https://wisionlab.cs.wisc.edu/project/tofcoding/" target="_blank">here</a>.
+                </p>
+                <div class="text-center">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/wUmpJZRiarI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Implementation on a Commercial ToF Module (ICCP 2021)
+                </h3>
+                <div class="text-center">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/SSdYyNFoUFI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Practical Code Design (CVPR 2019 Supplementary Video)
+                </h3>
+                <div class="text-center">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tzs2WuwZ4ag" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <hr>
+       
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Bibtex Citation
+                </h3>
+                <div class="bibtexsection">
+    @inproceedings{gutierrez2019practical,
+        title={Practical coding function design 
+            for time-of-flight imaging},
+        author={Gutierrez-Barragan, Felipe 
+            and Reza, Syed Azer 
+            and Velten, Andreas 
+            and Gupta, Mohit},
+        booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision 
+            and Pattern Recognition},
+        pages={1566--1574},
+        year={2019}
+      }
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Acknowledgments
+                </h3>
+                The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a>.
+            </div>
+        </div>
+    
+    </div>
+
+
+</body></html>
