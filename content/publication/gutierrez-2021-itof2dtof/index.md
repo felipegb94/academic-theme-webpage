@@ -19,9 +19,9 @@ are robust to low SNR and can deal with ambiguous scenarios that arise in
 practice (e.g., specular MPI, optical cross-talk). We demonstrate the benefits
 of iToF2dToF over previous methods in real depth sensing scenarios."
 featured: true
-# publication: "*Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition*"
+publication: "*IEEE Transactions on Computational Imaging*"
 # url_code: "https://github.com/felipegb94/ToFSim"
-url_pdf: "https://arxiv.org/abs/2103.07087"
+url_pdf: "https://ieeexplore.ieee.org/document/9609533"
 url_arxiv: "https://arxiv.org/abs/2103.07087"
 url_video: "https://youtu.be/tEMinzXNTv8"
 url_project: "/~felipe/project-pages/2021-itof2dtof/"

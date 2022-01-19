@@ -20,6 +20,7 @@ bio: My research interests include computational imaging, computer vision, medic
 interests:
 - Computational Imaging
 - Time-of-Flight and LIDAR Imaging
+- Single-Photon Cameras
 
 # Education to show in About widget
 education:
@@ -67,7 +68,9 @@ email: ""
 highlight_name: false
 ---
 
-I am a 4th year Ph.D. student at UW-Madison advised by [Prof. Andreas Velten](https://biostat.wisc.edu/~compoptics/) and [Prof. Mohit Gupta](http://wisionlab.cs.wisc.edu/). My work is at the intersection of computer vision, signal processing, optics, and machine learning. My recent work has focused on practical modifications to time-of-flight imaging systems that allow them to operate robustly in everyday and adverse conditions. In general, I am interested in the theory, design, and applications of imaging systems. 
+I am a 4th year Ph.D. student at UW-Madison advised by [Prof. Andreas Velten](https://biostat.wisc.edu/~compoptics/) and [Prof. Mohit Gupta](http://wisionlab.cs.wisc.edu/). My work is at the intersection of computer vision, signal processing, optics, and machine learning. My Ph.D. research has focused on practical modifications to time-of-flight imaging systems that allow them to operate robustly in everyday and adverse conditions.
+
+<!-- In general, I am interested in the theory, design, and applications of imaging systems.  -->
 
 <!-- I am currently working on the design and implementation of new coding functions for time of flight imaging that reliably perform in low SNR scenarios. -->
 
