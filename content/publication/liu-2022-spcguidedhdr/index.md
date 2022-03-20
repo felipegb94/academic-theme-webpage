@@ -24,7 +24,7 @@ url_code: "https://github.com/Way-Yuhao/Single-Photon-Guided-HDR"
 url_pdf: "https://openaccess.thecvf.com/content/WACV2022/html/Liu_Single-Photon_Camera_Guided_Extreme_Dynamic_Range_Imaging_WACV_2022_paper.html"
 url_video: "https://www.youtube.com/watch?v=i_mzoXlxshs"
 url_project: "https://www.yuhaoliu.net/spc-guided-hdr"
-summary: "Proposed to train data-driven ToF models to estimate an intermediate representation that encodes depths, instead of depthmaps."
+summary: "Proposed a CMOS-SPC sensor fusion model for extreme dynamic range imaging from only two images."
 
 ---
 
