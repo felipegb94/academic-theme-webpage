@@ -1,0 +1,206 @@
+<html><head lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Compressive Single-Photon Histograms</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="icon" type="image/png" href="./assets/icon.png">
+    <link rel="stylesheet" href="../index_files/bootstrap.min.css">
+    <link rel="stylesheet" href="../index_files/font-awesome.min.css">
+    <link rel="stylesheet" href="../index_files/codemirror.min.css">
+    <link rel="stylesheet" href="../index_files/app.css">
+    <link rel="stylesheet" href="../index_files/bootstrap.min(1).css">
+    
+    <link rel="stylesheet" href="./custom.css">
+
+    <script type="text/javascript" async="" src="../index_files/analytics.js"></script>
+    <script type="text/javascript" async="" src="../index_files/analytics(1).js"></script>
+    <script async="" src="../index_files/js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-110862391-3');
+    </script>
+
+    <script src="../index_files/jquery.min.js"></script>
+    <script src="../index_files/bootstrap.min.js"></script>
+    <script src="../index_files/codemirror.min.js"></script>
+    <script src="../index_files/clipboard.min.js"></script>
+
+    <script src="../index_files/app.js"></script>
+</head>
+
+<body data-gr-c-s-loaded="true">
+    <div class="container" id="main">
+        <div class="row">
+            <h1 class="col-md-12 text-center">
+                Compressive Single-Photon 3D Cameras
+            <br />
+            <br />
+            <small>
+                IEEE/CVF Computer Vision and Pattern Recognition Conference (CVPR) 2022            
+            </small>
+            <br /><br />
+            </h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="http://pages.cs.wisc.edu/~felipe/" target="_blank">
+                          Felipe Gutierrez-Barragan
+                        </a><sup>1</sup>
+                    </li>
+                    <li>
+                        <a href="https://www.atulingle.com/" target="_blank">
+                            Atul Ingle
+                        </a>
+                        <sup>1</sup>
+                    </li>
+                    <li>
+                        <a href="https://scholar.google.com/citations?user=l_VReoMAAAAJ&hl=en&oi=sra" target="_blank">
+                            Trevor Seets
+                        </a>
+                        <sup>1</sup>
+                    </li>
+                    <li>
+                        <a href="https://wisionlab.cs.wisc.edu/people/mohit-gupta/" target="_blank">
+                          Mohit Gupta
+                        </a><sup>1</sup>
+                    </li>
+                    <li>
+                        <a href="https://biostat.wisc.edu/~velten/" target="_blank">
+                            Andreas Velten
+                        </a>
+                        <sup>1</sup>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <sup>1</sup>University of Wisconsin-Madison
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <ul class="nav nav-pills nav-justified">
+                    <li>
+                        <a href="">
+                        <img src="./assets/paper_thumbnail.png" height="120px"><br>
+                            <h4><strong>Paper (TBD)</strong></h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://youtu.be/RDJYQkmqES0" target="_blank">
+                        <img src="./assets/youtube_icon_dark.png" height="120px"><br>
+                            <h4><strong>Overview</strong></h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                        <img src="./assets/github_pad.png" height="120px"><br>
+                            <h4><strong>Code and Data (TBD)</strong></h4>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Overview
+                </h3>
+                <img src="./assets/TeaserFig_3DReconstructions.png" class="img-responsive" alt="overview"><br>
+                <p class="text-justify">
+                    <strong>Paper, code and data will be posted soon.</strong>
+                </p>
+                <p class="text-justify">
+                    Single-photon avalanche diodes (SPADs) are an emerging pixel technology for time-of-flight (ToF) 3D cameras that can capture the time-of-arrival of individual photons at picosecond resolution. To estimate depths, current SPAD-based 3D cameras measure the round-trip time of a laser pulse by building a per-pixel histogram of photon timestamps. As the spatial and timestamp resolution of SPAD-based cameras increase, their output data rates far exceed the capacity of existing data transfer technologies. One major reason for SPAD's bandwidth-intensive operation is the tight coupling that exists between depth resolution and histogram resolution. To weaken this coupling, we propose compressive single-photon histograms (CSPH). CSPHs are a per-pixel compressive representation of the high-resolution histogram, that is built on-the-fly, as each photon is detected. They are based on a family of linear coding schemes that can be expressed as a simple matrix operation. We design different CSPH coding schemes for 3D imaging and evaluate them under different signal and background levels, laser waveforms, and illumination setups. Our results show that a well-designed CSPH can consistently reduce data rates by 1-2 orders of magnitude without compromising depth precision.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Highlights
+                </h3>
+                <p class="text-justify">
+                    <ul>
+                        <li>
+                            A compression framework for SPAD-based 3D cameras based on the coded projection of photon timestamp data. 
+                        </li>
+                        <li>
+                            Compression is done an online fashion as each photon is detected, and does not require in-sensor storage of large histograms.
+                        </li>
+                        <li>
+                            Multiple heuristics on how to design a coding matrix that achieves high compression, while preserving accuracy and mitigating common challenges such as indirect light reflections. 
+                        </li>
+                        <li>
+                            Evaluation on real-world experimental data from a scanning-based SPAD LiDAR system, and also on physically accurate simulations of a flash illumination SPAD LiDAR system.                       
+                        </li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Video Overview Prepared for CVPR 2022
+                </h3>
+                <div class="text-center">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/RDJYQkmqES0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Bibtex Citation
+                </h3>
+                <div class="bibtexsection">
+    @inproceedings{gutierrez2022compressive,
+        title={Compressive Single-Photon 3D Cameras},
+        author={Gutierrez-Barragan, Felipe 
+            and Ingle, Atul 
+            and Seets, Trevor 
+            and Gupta, Mohit
+            and Velten, Andreas}, 
+        booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision 
+            and Pattern Recognition},
+        pages={},
+        year={2022}
+      }
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Acknowledgments
+                </h3>
+                The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a>.
+            </div>
+        </div>
+    
+    </div>
+
+
+</body></html>
